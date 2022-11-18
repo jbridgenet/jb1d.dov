@@ -1,0 +1,51 @@
+{
+  "host": "localhost",
+  "port": 3030,
+  "public": "./public/",
+  "origins": [
+    "http://localhost:3030"
+  ],
+  "paginate": {
+    "default": 10,
+    "max": 50
+  },
+  "mssql": {
+    "client": "mssql",
+    "connection": "mssql://sa:ba0z1@win08/jb1d"
+  },
+  "authentication": {
+    "entity": "user",
+    "service": "users",
+    "secret": "lA41Th9oZqcywhaBnmmpaYb5gMdJrqcM",
+    "authStrategies": [
+      "jwt",
+      "local"
+    ],
+    "jwtOptions": {
+      "header": {
+        "typ": "access"
+      },
+      "audience": "https://JBridge.NET",
+      "algorithm": "HS256",
+      "expiresIn": "7d"
+    },
+    "local": {
+      "usernameField": "username",
+      "passwordField": "password"
+    },
+    "oauth": {
+      "google": {
+        "key": "819669594394-tbikikgng6k6u2htf33fqjc0u82bsoas.apps.googleusercontent.com",
+        "secret": "lJqKySdIL771UmpZhdLffwpu"
+      },
+      "facebook": {
+        "key": "723452768493061",
+        "secret": "91ebec1cf7c599a114378dd2470b2648"
+      },
+      "twitter": {
+        "key": "<twitter oauth key>",
+        "secret": "<twitter oauth secret>"
+      }
+    }
+  }
+}
