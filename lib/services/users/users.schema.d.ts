@@ -1,0 +1,297 @@
+import type { Static } from '@feathersjs/typebox';
+import type { HookContext } from '../../declarations';
+export declare const userSchema: import("@sinclair/typebox").TObject<{
+    id: import("@sinclair/typebox").TNumber;
+    username: import("@sinclair/typebox").TString<string>;
+    email: import("@sinclair/typebox").TString<string>;
+    emailVerified: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TBoolean>;
+    password: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TString<string>>;
+    googleId: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TString<string>>;
+    facebookId: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TString<string>>;
+    twitterId: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TString<string>>;
+    countryCode: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TString<string>>;
+    profilePic: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TString<string>>;
+    conventions: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TString<string>>;
+    status: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TInteger>;
+    stars: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TInteger>;
+    followers: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TInteger>;
+    following: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TInteger>;
+    createdAt: import("@sinclair/typebox").TNumber;
+    updatedAt: import("@sinclair/typebox").TNumber;
+}>;
+export declare type User = Static<typeof userSchema>;
+export declare const userResolver: import("@feathersjs/schema").Resolver<{
+    password?: string | undefined;
+    status?: number | undefined;
+    emailVerified?: boolean | undefined;
+    googleId?: string | undefined;
+    facebookId?: string | undefined;
+    twitterId?: string | undefined;
+    countryCode?: string | undefined;
+    profilePic?: string | undefined;
+    conventions?: string | undefined;
+    stars?: number | undefined;
+    followers?: number | undefined;
+    following?: number | undefined;
+    id: number;
+    username: string;
+    email: string;
+    createdAt: number;
+    updatedAt: number;
+}, HookContext<any>>;
+export declare const userExternalResolver: import("@feathersjs/schema").Resolver<{
+    password?: string | undefined;
+    status?: number | undefined;
+    emailVerified?: boolean | undefined;
+    googleId?: string | undefined;
+    facebookId?: string | undefined;
+    twitterId?: string | undefined;
+    countryCode?: string | undefined;
+    profilePic?: string | undefined;
+    conventions?: string | undefined;
+    stars?: number | undefined;
+    followers?: number | undefined;
+    following?: number | undefined;
+    id: number;
+    username: string;
+    email: string;
+    createdAt: number;
+    updatedAt: number;
+}, HookContext<any>>;
+export declare const userDataSchema: import("@sinclair/typebox").TPick<import("@sinclair/typebox").TObject<{
+    id: import("@sinclair/typebox").TNumber;
+    username: import("@sinclair/typebox").TString<string>;
+    email: import("@sinclair/typebox").TString<string>;
+    emailVerified: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TBoolean>;
+    password: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TString<string>>;
+    googleId: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TString<string>>;
+    facebookId: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TString<string>>;
+    twitterId: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TString<string>>;
+    countryCode: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TString<string>>;
+    profilePic: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TString<string>>;
+    conventions: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TString<string>>;
+    status: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TInteger>;
+    stars: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TInteger>;
+    followers: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TInteger>;
+    following: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TInteger>;
+    createdAt: import("@sinclair/typebox").TNumber;
+    updatedAt: import("@sinclair/typebox").TNumber;
+}>, ["username", "email", "password", "googleId", "facebookId", "twitterId", "countryCode"]>;
+export declare type UserData = Static<typeof userDataSchema>;
+export declare const userDataValidator: import("@feathersjs/schema").DataValidatorMap;
+export declare const userDataResolver: import("@feathersjs/schema").Resolver<{
+    password?: string | undefined;
+    status?: number | undefined;
+    emailVerified?: boolean | undefined;
+    googleId?: string | undefined;
+    facebookId?: string | undefined;
+    twitterId?: string | undefined;
+    countryCode?: string | undefined;
+    profilePic?: string | undefined;
+    conventions?: string | undefined;
+    stars?: number | undefined;
+    followers?: number | undefined;
+    following?: number | undefined;
+    id: number;
+    username: string;
+    email: string;
+    createdAt: number;
+    updatedAt: number;
+}, HookContext<any>>;
+export declare const userQueryProperties: import("@sinclair/typebox").TPick<import("@sinclair/typebox").TObject<{
+    id: import("@sinclair/typebox").TNumber;
+    username: import("@sinclair/typebox").TString<string>;
+    email: import("@sinclair/typebox").TString<string>;
+    emailVerified: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TBoolean>;
+    password: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TString<string>>;
+    googleId: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TString<string>>;
+    facebookId: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TString<string>>;
+    twitterId: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TString<string>>;
+    countryCode: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TString<string>>;
+    profilePic: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TString<string>>;
+    conventions: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TString<string>>;
+    status: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TInteger>;
+    stars: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TInteger>;
+    followers: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TInteger>;
+    following: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TInteger>;
+    createdAt: import("@sinclair/typebox").TNumber;
+    updatedAt: import("@sinclair/typebox").TNumber;
+}>, ["id", "username", "email", "googleId", "facebookId", "twitterId", "countryCode", "status"]>;
+export declare const userQuerySchema: import("@sinclair/typebox").TIntersect<[import("@sinclair/typebox").TObject<{
+    $limit: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TNumber>;
+    $skip: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TNumber>;
+    $sort: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TObject<{
+        id: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TInteger>;
+        email: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TInteger>;
+        username: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TInteger>;
+        googleId: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TInteger>;
+        facebookId: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TInteger>;
+        twitterId: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TInteger>;
+        countryCode: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TInteger>;
+        status: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TInteger>;
+    }>>;
+    $select: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TUnsafe<("id" | "email" | "username" | "googleId" | "facebookId" | "twitterId" | "countryCode" | "status")[]>>;
+}>, import("@sinclair/typebox").TObject<{
+    id: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TUnion<[import("@sinclair/typebox").TNumber, import("@sinclair/typebox").TObject<{
+        $gt: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TNumber>;
+        $gte: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TNumber>;
+        $lt: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TNumber>;
+        $lte: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TNumber>;
+        $ne: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TNumber>;
+        $in: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TArray<import("@sinclair/typebox").TNumber>>;
+        $nin: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TArray<import("@sinclair/typebox").TNumber>>;
+    }>]>>;
+    email: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TUnion<[import("@sinclair/typebox").TString<string>, import("@sinclair/typebox").TObject<{
+        $gt: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TString<string>>;
+        $gte: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TString<string>>;
+        $lt: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TString<string>>;
+        $lte: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TString<string>>;
+        $ne: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TString<string>>;
+        $in: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TArray<import("@sinclair/typebox").TString<string>>>;
+        $nin: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TArray<import("@sinclair/typebox").TString<string>>>;
+    }>]>>;
+    username: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TUnion<[import("@sinclair/typebox").TString<string>, import("@sinclair/typebox").TObject<{
+        $gt: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TString<string>>;
+        $gte: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TString<string>>;
+        $lt: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TString<string>>;
+        $lte: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TString<string>>;
+        $ne: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TString<string>>;
+        $in: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TArray<import("@sinclair/typebox").TString<string>>>;
+        $nin: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TArray<import("@sinclair/typebox").TString<string>>>;
+    }>]>>;
+    googleId: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TUnion<[import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TString<string>>, import("@sinclair/typebox").TObject<{
+        $gt: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TString<string>>>;
+        $gte: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TString<string>>>;
+        $lt: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TString<string>>>;
+        $lte: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TString<string>>>;
+        $ne: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TString<string>>>;
+        $in: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TArray<import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TString<string>>>>;
+        $nin: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TArray<import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TString<string>>>>;
+    }>]>>;
+    facebookId: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TUnion<[import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TString<string>>, import("@sinclair/typebox").TObject<{
+        $gt: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TString<string>>>;
+        $gte: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TString<string>>>;
+        $lt: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TString<string>>>;
+        $lte: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TString<string>>>;
+        $ne: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TString<string>>>;
+        $in: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TArray<import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TString<string>>>>;
+        $nin: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TArray<import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TString<string>>>>;
+    }>]>>;
+    twitterId: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TUnion<[import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TString<string>>, import("@sinclair/typebox").TObject<{
+        $gt: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TString<string>>>;
+        $gte: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TString<string>>>;
+        $lt: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TString<string>>>;
+        $lte: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TString<string>>>;
+        $ne: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TString<string>>>;
+        $in: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TArray<import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TString<string>>>>;
+        $nin: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TArray<import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TString<string>>>>;
+    }>]>>;
+    countryCode: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TUnion<[import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TString<string>>, import("@sinclair/typebox").TObject<{
+        $gt: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TString<string>>>;
+        $gte: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TString<string>>>;
+        $lt: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TString<string>>>;
+        $lte: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TString<string>>>;
+        $ne: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TString<string>>>;
+        $in: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TArray<import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TString<string>>>>;
+        $nin: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TArray<import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TString<string>>>>;
+    }>]>>;
+    status: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TUnion<[import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TInteger>, import("@sinclair/typebox").TObject<{
+        $gt: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TInteger>>;
+        $gte: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TInteger>>;
+        $lt: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TInteger>>;
+        $lte: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TInteger>>;
+        $ne: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TInteger>>;
+        $in: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TArray<import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TInteger>>>;
+        $nin: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TArray<import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TInteger>>>;
+    }>]>>;
+}>]>;
+export declare type UserQuery = Static<typeof userQuerySchema>;
+export declare const userQueryValidator: import("@feathersjs/schema").Validator<any, any>;
+export declare const userQueryResolver: import("@feathersjs/schema").Resolver<{
+    $limit?: number | undefined;
+    $skip?: number | undefined;
+    $sort?: {
+        id?: number | undefined;
+        email?: number | undefined;
+        username?: number | undefined;
+        googleId?: number | undefined;
+        facebookId?: number | undefined;
+        twitterId?: number | undefined;
+        countryCode?: number | undefined;
+        status?: number | undefined;
+    } | undefined;
+    $select?: ("id" | "email" | "username" | "googleId" | "facebookId" | "twitterId" | "countryCode" | "status")[] | undefined;
+} & {
+    id?: number | {
+        $gt?: number | undefined;
+        $gte?: number | undefined;
+        $lt?: number | undefined;
+        $lte?: number | undefined;
+        $ne?: number | undefined;
+        $in?: number[] | undefined;
+        $nin?: number[] | undefined;
+    } | undefined;
+    email?: string | {
+        $gt?: string | undefined;
+        $gte?: string | undefined;
+        $lt?: string | undefined;
+        $lte?: string | undefined;
+        $ne?: string | undefined;
+        $in?: string[] | undefined;
+        $nin?: string[] | undefined;
+    } | undefined;
+    username?: string | {
+        $gt?: string | undefined;
+        $gte?: string | undefined;
+        $lt?: string | undefined;
+        $lte?: string | undefined;
+        $ne?: string | undefined;
+        $in?: string[] | undefined;
+        $nin?: string[] | undefined;
+    } | undefined;
+    googleId?: string | {
+        $gt?: string | undefined;
+        $gte?: string | undefined;
+        $lt?: string | undefined;
+        $lte?: string | undefined;
+        $ne?: string | undefined;
+        $in?: string[] | undefined;
+        $nin?: string[] | undefined;
+    } | undefined;
+    facebookId?: string | {
+        $gt?: string | undefined;
+        $gte?: string | undefined;
+        $lt?: string | undefined;
+        $lte?: string | undefined;
+        $ne?: string | undefined;
+        $in?: string[] | undefined;
+        $nin?: string[] | undefined;
+    } | undefined;
+    twitterId?: string | {
+        $gt?: string | undefined;
+        $gte?: string | undefined;
+        $lt?: string | undefined;
+        $lte?: string | undefined;
+        $ne?: string | undefined;
+        $in?: string[] | undefined;
+        $nin?: string[] | undefined;
+    } | undefined;
+    countryCode?: string | {
+        $gt?: string | undefined;
+        $gte?: string | undefined;
+        $lt?: string | undefined;
+        $lte?: string | undefined;
+        $ne?: string | undefined;
+        $in?: string[] | undefined;
+        $nin?: string[] | undefined;
+    } | undefined;
+    status?: number | {
+        $gt?: number | undefined;
+        $gte?: number | undefined;
+        $lt?: number | undefined;
+        $lte?: number | undefined;
+        $ne?: number | undefined;
+        $in?: number[] | undefined;
+        $nin?: number[] | undefined;
+    } | undefined;
+}, HookContext<any>>;
