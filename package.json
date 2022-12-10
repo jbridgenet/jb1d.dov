@@ -60,6 +60,7 @@
   "devDependencies": {
     "@feathersjs/cli": "^5.0.0-pre.33",
     "@feathersjs/rest-client": "^5.0.0-pre.33",
+    "@types/lodash": "^4.14.191",
     "@types/mocha": "^10.0.0",
     "@types/node": "^18.11.9",
     "axios": "^1.1.3",

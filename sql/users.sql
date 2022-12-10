@@ -1,4 +1,4 @@
-USE [1d]
+USE [jb1d]
 GO
 
 ALTER TABLE [dbo].[users] DROP CONSTRAINT [DF_users_updatedAt]
@@ -28,12 +28,12 @@ GO
 ALTER TABLE [dbo].[users] DROP CONSTRAINT [DF_users_emailVerified]
 GO
 
-/****** Object:  Table [dbo].[users]    Script Date: 11/13/2022 9:15:37 AM ******/
+/****** Object:  Table [dbo].[users]    Script Date: 12/10/2022 8:58:40 AM ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[users]') AND type in (N'U'))
 DROP TABLE [dbo].[users]
 GO
 
-/****** Object:  Table [dbo].[users]    Script Date: 11/13/2022 9:15:37 AM ******/
+/****** Object:  Table [dbo].[users]    Script Date: 12/10/2022 8:58:40 AM ******/
 SET ANSI_NULLS ON
 GO
 
@@ -49,6 +49,7 @@ CREATE TABLE [dbo].[users](
 	[googleId] [nvarchar](255) NULL,
 	[facebookId] [nvarchar](255) NULL,
 	[twitterId] [nvarchar](255) NULL,
+	[realname] [nvarchar](32) NULL,
 	[countryCode] [nvarchar](2) NULL,
 	[profilePic] [nvarchar](255) NULL,
 	[conventions] [nvarchar](255) NULL,
@@ -58,10 +59,10 @@ CREATE TABLE [dbo].[users](
 	[following] [int] NULL,
 	[createdAt] [date] NULL,
 	[updatedAt] [date] NULL,
- CONSTRAINT [PK__users__3213E83F32E0915F] PRIMARY KEY CLUSTERED 
+ CONSTRAINT [PK__users__username] PRIMARY KEY CLUSTERED 
 (
-	[id] ASC
-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+	[username] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
 

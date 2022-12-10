@@ -11,7 +11,7 @@
   },
   "mssql": {
     "client": "mssql",
-    "connection": "mssql://sa:ba0z1@win08/jb1d"
+    "connection": "mssql://sa:ba0z1@win2019//sqlexpress/jb1d"
   },
   "authentication": {
     "entity": "user",

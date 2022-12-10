@@ -9,6 +9,7 @@ export declare const userSchema: import("@sinclair/typebox").TObject<{
     googleId: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TString<string>>;
     facebookId: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TString<string>>;
     twitterId: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TString<string>>;
+    realname: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TString<string>>;
     countryCode: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TString<string>>;
     profilePic: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TString<string>>;
     conventions: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TString<string>>;
@@ -27,6 +28,7 @@ export declare const userResolver: import("@feathersjs/schema").Resolver<{
     googleId?: string | undefined;
     facebookId?: string | undefined;
     twitterId?: string | undefined;
+    realname?: string | undefined;
     countryCode?: string | undefined;
     profilePic?: string | undefined;
     conventions?: string | undefined;
@@ -46,6 +48,7 @@ export declare const userExternalResolver: import("@feathersjs/schema").Resolver
     googleId?: string | undefined;
     facebookId?: string | undefined;
     twitterId?: string | undefined;
+    realname?: string | undefined;
     countryCode?: string | undefined;
     profilePic?: string | undefined;
     conventions?: string | undefined;
@@ -67,6 +70,7 @@ export declare const userDataSchema: import("@sinclair/typebox").TPick<import("@
     googleId: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TString<string>>;
     facebookId: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TString<string>>;
     twitterId: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TString<string>>;
+    realname: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TString<string>>;
     countryCode: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TString<string>>;
     profilePic: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TString<string>>;
     conventions: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TString<string>>;
@@ -76,7 +80,7 @@ export declare const userDataSchema: import("@sinclair/typebox").TPick<import("@
     following: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TInteger>;
     createdAt: import("@sinclair/typebox").TNumber;
     updatedAt: import("@sinclair/typebox").TNumber;
-}>, ["username", "email", "password", "googleId", "facebookId", "twitterId", "countryCode"]>;
+}>, ["username", "email", "password", "googleId", "facebookId", "twitterId", "realname", "countryCode"]>;
 export declare type UserData = Static<typeof userDataSchema>;
 export declare const userDataValidator: import("@feathersjs/schema").DataValidatorMap;
 export declare const userDataResolver: import("@feathersjs/schema").Resolver<{
@@ -86,6 +90,7 @@ export declare const userDataResolver: import("@feathersjs/schema").Resolver<{
     googleId?: string | undefined;
     facebookId?: string | undefined;
     twitterId?: string | undefined;
+    realanme?: string | undefined;
     countryCode?: string | undefined;
     profilePic?: string | undefined;
     conventions?: string | undefined;
@@ -107,6 +112,7 @@ export declare const userQueryProperties: import("@sinclair/typebox").TPick<impo
     googleId: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TString<string>>;
     facebookId: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TString<string>>;
     twitterId: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TString<string>>;
+    realname: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TString<string>>;
     countryCode: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TString<string>>;
     profilePic: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TString<string>>;
     conventions: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TString<string>>;
@@ -116,7 +122,7 @@ export declare const userQueryProperties: import("@sinclair/typebox").TPick<impo
     following: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TInteger>;
     createdAt: import("@sinclair/typebox").TNumber;
     updatedAt: import("@sinclair/typebox").TNumber;
-}>, ["id", "username", "email", "googleId", "facebookId", "twitterId", "countryCode", "status"]>;
+}>, ["id", "username", "email", "googleId", "facebookId", "twitterId", "realname", "countryCode", "status"]>;
 export declare const userQuerySchema: import("@sinclair/typebox").TIntersect<[import("@sinclair/typebox").TObject<{
     $limit: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TNumber>;
     $skip: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TNumber>;
@@ -127,6 +133,7 @@ export declare const userQuerySchema: import("@sinclair/typebox").TIntersect<[im
         googleId: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TInteger>;
         facebookId: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TInteger>;
         twitterId: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TInteger>;
+        realname: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TInteger>;
         countryCode: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TInteger>;
         status: import("@sinclair/typebox").TOptional<import("@sinclair/typebox").TInteger>;
     }>>;
@@ -217,6 +224,7 @@ export declare const userQueryResolver: import("@feathersjs/schema").Resolver<{
         googleId?: number | undefined;
         facebookId?: number | undefined;
         twitterId?: number | undefined;
+        realname?: number | undefined;
         countryCode?: number | undefined;
         status?: number | undefined;
     } | undefined;
